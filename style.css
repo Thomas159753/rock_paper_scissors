@@ -1,0 +1,64 @@
+/* #ButtonRock {
+width: 50px;
+height: 20px;
+} */
+
+#header{
+    background-color: black;
+    height: 150px;
+    opacity: 0.8;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#ButtonsDiv{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 65px;
+    padding-right: 65px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#playerscore, #computerscore, #rounds, #ties{
+    margin-left: 10px;
+}
+
+#playerArea, #computerArea, #roundsArea, #tiesArea{
+    display: flex;
+    flex-direction: row;
+}
+
+#scoreArea{
+    background-color: black;
+    opacity: 0.8;
+    width: 200px;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    background-image:url('https://cutewallpaper.org/21/static-background-gif/static-ART-642-NEW-MEDIA.gif'); background-repeat:repeat;
+}
+
+#ButtonRock{
+    width: 180px;
+    height: 180px;
+}
+
+#ButtonPaper{
+    width: 180px;
+    height: 180px;
+}
+
+#ButtonScissors{
+    width: 180px;
+    height: 180px;
+}
