@@ -3,6 +3,9 @@ let computerScore = 0;
 let round = 0;
 let tiesInGame = 0;
 let choices = ["Rock", "Paper", "Scissors"];
+let locked = false; // anti spam lock function
+
+
 // popup window close
 const popup = document.querySelector('#closepopup');
 const popupdiv = document.querySelector('.popUpWindows')
@@ -20,40 +23,54 @@ document.getElementById('ties').innerHTML = tiesInGame;// ties
 
 scoreboard(); // calling it the begining will display all zeros otherwise it will be blank untill you press a button
 
+// anti spam unlock function
+function unlock(){
+  locked = false;
+}
+
 // buttons
 
 // scissors
 const btnScissors = document.querySelector('#ButtonScissors');
 btnScissors.addEventListener('click', () => {
+  if (locked == false){ //        \
+    locked = true; //              - locking button for anti spamming
+    setTimeout(unlock, 2000);//   /
   playerSelection = "Scissors";
   let computerSelection = choices[Math.floor(Math.random() * choices.length)];
   playRound(playerSelection, computerSelection);
   round++
   endgame(playerScore, computerScore, round, tiesInGame);
   scoreboard(); // caling scoreboard to update the board
-});
+}});
 
 // rock
 const btnRock = document.querySelector('#ButtonRock');
 btnRock.addEventListener('click', () => {
+  if (locked == false){ //        \
+    locked = true; //              - locking button for anti spamming
+    setTimeout(unlock, 2000);//   /
   playerSelection = "Rock";
   let computerSelection = choices[Math.floor(Math.random() * choices.length)];
   playRound(playerSelection, computerSelection);
   round++
   endgame(playerScore, computerScore, round, tiesInGame);
   scoreboard(); // caling scoreboard to update the board
-});
+}});
 
 // paper
 const btnPaper = document.querySelector('#ButtonPaper');
 btnPaper.addEventListener('click', () => {
+  if (locked == false){ //        \
+    locked = true; //              - locking button for anti spamming
+    setTimeout(unlock, 2000);//   /
   playerSelection = "Paper";
   let computerSelection = choices[Math.floor(Math.random() * choices.length)];
   playRound(playerSelection, computerSelection);
   round++
   endgame(playerScore, computerScore, round, tiesInGame);
   scoreboard(); // caling scoreboard to update the board
-});
+}});
 
 // functions
 
