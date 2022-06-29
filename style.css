@@ -1,8 +1,43 @@
-/* #ButtonRock {
-width: 50px;
-height: 20px;
-} */
+/* animetion pop up */
+#popupText {
+    font-family: 'Press Start 2P', cursive;
+    font-size: x-large;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3s steps(22, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 39% }
+  }
 
+#closepopup{
+    margin-top: 100px;
+    width: 180px;
+    height: 80px;
+}
+/* pop up windows */
+.popUpWindows{
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* end of pop up */
 #header{
     background-color: black;
     height: 150px;

@@ -3,7 +3,12 @@ let computerScore = 0;
 let round = 0;
 let tiesInGame = 0;
 let choices = ["Rock", "Paper", "Scissors"];
-
+// popup window close
+const popup = document.querySelector('#closepopup');
+const popupdiv = document.querySelector('.popUpWindows')
+popup.addEventListener('click', () => {
+  popupdiv.remove();
+});
 // score board display
 
 function scoreboard(){
@@ -52,7 +57,7 @@ btnPaper.addEventListener('click', () => {
 
 // functions
 
-// this function clears the winner text after 2 seconds
+//this function clears the winner text after 2 seconds
 function clearText() {
   document.getElementById('winner').innerHTML;
   setTimeout(function(){
@@ -89,7 +94,7 @@ function playRound (playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
         tiesInGame++
         document.getElementById('winner').innerHTML = `Its A Tie you Both choose ${playerSelection}!`; // display tie
-        clearText(); // clears the text after 1 second
+        clearText(); // clears the text after 2 second
       }
       if (
         (playerSelection === 'Rock' && computerSelection === 'Scissors') ||
@@ -98,7 +103,7 @@ function playRound (playerSelection, computerSelection) {
       ) {
         playerScore++
         document.getElementById('winner').innerHTML = `You Win! ${playerSelection} beats ${computerSelection}`; // display you win
-        clearText(); // clears the text after 1 second
+        clearText(); // clears the text after 2 second
       }
       if (
         (computerSelection === 'Rock' && playerSelection === 'Scissors') ||
@@ -106,7 +111,7 @@ function playRound (playerSelection, computerSelection) {
         (computerSelection === 'Paper' && playerSelection === 'Rock')
       ) {
         computerScore++
-        document.getElementById('winner').innerHTML = `You Loose! ${computerSelection} beats ${playerSelection}`; // display you loose
-        clearText(); // clears the text after 1 second
+        document.getElementById('winner').innerHTML = `You Lose! ${computerSelection} beats ${playerSelection}`; // display you loose
+        clearText(); // clears the text after 2 second
       }
 }
